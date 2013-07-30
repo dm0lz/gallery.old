@@ -1,0 +1,28 @@
+// Place all the styles related to the Galleries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.gallerie{
+	header{
+		h1.title{
+			color: $bleu;
+			text-align: center;
+			border-bottom: 1px solid green;
+		}
+	}
+}
+.navbutton{
+	margin-top: -50px;
+}
+
+.welcome{
+	text-align:center;
+	h1{
+		color: $bleu;
+	}
+}
+
+.index{
+	h1{
+		color: $bleu;
+	}
+}

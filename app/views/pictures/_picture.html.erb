@@ -1,0 +1,5 @@
+<li>
+	<%= picture.name %>
+	<%= link_to(image_tag(picture.image_url(:standard)), gallery_picture_path(@gallery, picture), :class => "th radius" ) %>
+	<%= link_to 'Destroy', gallery_picture_path(@gallery, picture), method: :delete, data: { confirm: 'Are you sure?' } %>
+</li>

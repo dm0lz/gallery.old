@@ -1,0 +1,39 @@
+
+<% if user_signed_in? %>
+
+    <section class="row index">
+
+        <h1>Picmage</h1>
+
+        <ul class="large-block-grid-5" id="pictures">
+            <% @galleries.each do |gallery| %>
+                <li>
+                    <div><%= link_to((image_tag gallery.cover_url(:thumb), :class => "th"), gallery) %></div>
+                    <div><%= link_to gallery.title, gallery %></div>
+                    <%# if can? :update, gallery %>
+                        <div>
+                            <%= link_to 'Show', gallery %> |
+                            <%= link_to 'Edit', edit_gallery_path(gallery) %> |
+                            <%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %>
+                        </div>
+                    <%# end %>
+                </li>
+            <% end %>
+        </ul>
+
+        <br />
+        
+        <%= link_to 'Créer un nouvel Album', new_gallery_path, :class => "button" %>
+
+    </section>
+
+<% else %>
+    
+    <div class="welcome">
+        <h1>Sign up and create your gallery</h1>
+    </div>
+
+<% end %>
+
+
+
